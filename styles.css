@@ -1,0 +1,59 @@
+body {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+#solar-system {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  margin: 40px auto;
+  border: 2px solid #444;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #000000, #050505, #0a0a0a, #0f0f0f);
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  margin-left: -40px;
+  background-color: #ffdd00;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 10px rgba(255, 221, 0, 0.5);
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+
+.planet::before {
+  content: attr(data-name);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-size: 12px;
+  color: #fff;
+}
